@@ -201,6 +201,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 
     /* (non-Javadoc)
      * @see org.mybatis.generator.api.CommentGenerator#addClassComment(org.mybatis.generator.api.dom.java.InnerClass, org.mybatis.generator.api.IntrospectedTable)
+     * 添加内部类的注释
      */
     public void addClassComment(InnerClass innerClass,
             IntrospectedTable introspectedTable) {

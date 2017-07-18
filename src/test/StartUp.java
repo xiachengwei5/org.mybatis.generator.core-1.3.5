@@ -21,8 +21,6 @@ public class StartUp {
 		
 		MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, shellCallback, warnings);
 		myBatisGenerator.generate(null);
-		System.out.println(warnings);
-		
 	}
 
 }
