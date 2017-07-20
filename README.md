@@ -1,6 +1,8 @@
 ### README
 
-为了提高工作效率在通过mybatis-generator插件生成实体类时就自动生成swagger需要的注解信息，修改了org.mybatis.generator.core-1.3.5的源码。
+为了提高工作效率在通过mybatis-generator插件生成实体类时就自动生成swagger需要的注解信息，同时解决在接收和返回日期格式的数据时需要手动对每个日期格式的字段添加相应注解的问题，修改了org.mybatis.generator.core-1.3.5的源码。
+
+具体的修改过程[查看博客](https://xiachengwei5.github.io/2017/07/19/mybatis%20generator%E6%8F%92%E4%BB%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9/) 
 
 主要修改内容如下：
 * 屏蔽mybatis-generator生成的实体类中默认的注释；
