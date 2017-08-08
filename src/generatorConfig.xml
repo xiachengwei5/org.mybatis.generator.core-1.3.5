@@ -4,7 +4,7 @@
 <generatorConfiguration>
 	<!-- 数据库驱动 注意：这个 location要指明\MySQL-connector-Java jar包的绝对路径 -->
 	<classPathEntry
-		location="E:\software\eclipse\Repository\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />
+		location="D:\software\IDE\Repository\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />
 
 	<context id="marketing" targetRuntime="MyBatis3"
 		defaultModelType="flat">
@@ -26,7 +26,7 @@
 
 		<!--数据库链接URL，用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/test" 
+			connectionURL="jdbc:mysql://192.168.31.91:3306/env_enforce" 
 			userId="root"
 			password="root">
 		</jdbcConnection>
@@ -55,7 +55,7 @@
 		</javaClientGenerator>
 		
 		<!-- 配置需要反向生成表的信息 -->
-		<table tableName="user_info" domainObjectName="UserInfo"
+		<table tableName="region" domainObjectName="Region"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">

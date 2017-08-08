@@ -237,6 +237,8 @@ public class DefaultCommentGenerator implements CommentGenerator {
         //String remarks = introspectedTable.getRemarks();
         //重新写方法从数据库中获取表备注的信息
         String remarks = introspectedTable.getFullyQualifiedTable().getRemark();
+        //获取实体类名称
+        String entityName = introspectedTable.getFullyQualifiedTable().getDomainObjectName();
         StringBuilder sb = new StringBuilder();
         
         //添加导入类的信息
@@ -247,6 +249,8 @@ public class DefaultCommentGenerator implements CommentGenerator {
         
         //添加类注释
         topLevelClass.addJavaDocLine("/**"); 
+        sb.append(" * "+ remarks); 
+        sb.append("\n");
         sb.append(" * 实体类对应的数据表为：  "); 
 		sb.append(introspectedTable.getFullyQualifiedTable());
 		topLevelClass.addJavaDocLine(sb.toString());
@@ -255,7 +259,7 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		//添加时间
 		topLevelClass.addJavaDocLine(" * @date " + getDateString());
 		topLevelClass.addJavaDocLine(" */");
-		topLevelClass.addJavaDocLine("@ApiModel(value =\"" + remarks + "\")");
+		topLevelClass.addJavaDocLine("@ApiModel(value =\"" + entityName + "\")");
         
 
         /*topLevelClass.addJavaDocLine("/**"); 
